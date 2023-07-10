@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Catch Me If You Can! - A Misleading Game
+    </title>
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+    <div id="main">
+        <header id="header">
+            <img id="rand" src="../resources/randGif/0.gif" alt="titleGif">
+            <br>
+            <!-- Kindof dropdown -->
+            <div class="github">
+                <img class="octocat" src="../resources/GitHub.png">
+                <!-- GitHub Links -->
+                <ul class="droplinks">
+                    <li>
+                        <a class="github-button" href="https://github.com/prithvi2k2" data-size="large"
+                            data-show-count="true" aria-label="Follow @prithvi2k2 on GitHub">Follow @prithvi2k2</a>
+                    </li>
+                    <li>
+                        <a class="github-button" href="https://github.com/prithvi2k2/repo_name" data-icon="octicon-star"
+                            data-size="large" data-show-count="true"
+                            aria-label="Star prithvi2k2/repo_name on GitHub">Liked it?
+                            Star it!</a>
+                    </li>
+                    <!-- <img src="none.png"> -->
+                </ul>
+            </div>
+        </header>
+
+        <div id="game">
+            <div id="target">
+                <!-- Using CSS var() and creating delayed ripple effects -->
+                <span id="core" style="animation: none;background: white;"></span>
+                <span style="--delay:1;"></span>
+                <span style="--delay:2;"></span>
+                <span style="--delay:3;"></span>
+                <span style="--delay:4;"></span>
+                <!-- <span style="--delay:5;"></span> -->
+            </div>
+        </div>
+    </div>
+    <div id="popcontainer">
+        <div class="popup">
+            This game depends heavily on Javascript! Please enable it to continue...
+            <div class="">
+                Javascript enabled?<br>Refresh Page(F5)
+            </div>
+            <div class="continue">
+                <a href="#header">Continue Anyway?!?!</a>
+            </div>
+        </div>
+    </div>
+
+    <noscript>
+        <style>
+            #popcontainer {
+                transition: all 1s ease;
+                visibility: visible;
+            }
+
+            .popup:target {
+                z-index: 4;
+            }
+        </style>
+    </noscript>
+    <script src="game.js"></script>
+    <!-- GitHub Buttons by @ntkme -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    cursor: crosshair;
+    height: 100%;
+}
+body{
+    background: darkkhaki;
+    background-image: url(../resources/Black-Animation-Background.svg);
+    color: rgb(133, 177, 133);
+    margin: 0;
+    height: 100%;
+}
+#main{
+    
+    height: 100%;
+
+}
+header{
+    /* margin-top: 1%; */
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 10%;
+}
+.github{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: auto; */
+    /* float: right; */
+}
+.droplinks{
+    visibility: hidden;
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.droplinks a{
+    color: rgb(207, 201, 201);
+    font-weight: bold;
+}
+.droplinks:hover .octocat{
+    visibility: visible;
+    animation: spin2 2s ease;
+}
+.droplinks:hover .octocat{
+    animation: spin2 2s ease;
+}
+.droplinks:hover{
+    visibility: visible;
+}
+.droplinks ul{
+    position: absolute;
+    /* float: bottom;*/
+}
+.octocat{
+    height: 40px;
+    width: 40px;
+    right: 10px;
+    animation: spin1 1s ease;
+    /* cursor:pointer; */
+}
+.octocat:hover{
+    animation: spin2 2s ease;
+}
+.octocat:hover + .droplinks{
+    visibility: visible;
+}
+#game{
+    height: 90%;
+    display: flex;
+    flex: 0 0 100px;
+    justify-content: center;
+    align-items: center;
+    max-height: 92%;
+    max-width: 100%;
+}
+#target{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: 0;
+}
+#core{
+    animation: none;
+    background: white;
+}
+/* #core:hover{
+    cursor:
+} */
+#target > span{
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px dashed white;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    animation: distort 2.5s infinite ease;
+    animation-delay: calc(0.5s * var(--delay));
+}
+@keyframes distort{
+    0%{
+        opacity:0.8;
+        transform: scale(1);
+    }
+    25%{
+        opacity: 0.5;
+        transform: scale(4);
+    }
+    50%{
+        opacity: 0.3;
+        transform: scale(7);
+    }
+    75%{
+        opacity: 0.5;
+        transform: scale(4);
+
+    }
+    100%{
+        opacity: 0.8;
+        transform: scale(1);
+    }
+}
+@keyframes spin1 {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin2 {
+    100%{
+        transform: rotate(-720deg);
+    }
+}
+/* Destruction - THE END */
+/* #target span:hover{
+    animation: destroy 5s;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+}
+@keyframes destroy{
+    0%{
+        opacity: 0.1;
+        border: 1px solid red;
+        background-color: red;
+    }
+    100%{
+        opacity: 1;
+        border: 1px solid red;
+
+        background-color: red;
+    }
+} */
+#popcontainer{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+    background-color: black;
+    cursor: default;
+}
+.popup{
+    top:50%;
+    right:40%;
+    background: gray;
+    opacity: 1;
+    border-radius: 12%;
+    color: black;
+    font-weight: bold;
+    padding: 3%;
+}
+.continue a{
+    background: black;
+    color: white;
+    content: max-content;
+    cursor: pointer;
+}
